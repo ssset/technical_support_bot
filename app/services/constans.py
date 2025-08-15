@@ -1,0 +1,4 @@
+CHAT_LIST_URL = '/chat/'
+CHAT_LISTENERS_URL = '/chats/{chat_oid}/listeners'
+DEFAULT_OFFSET=0
+DEFAULT_LIMIT=10

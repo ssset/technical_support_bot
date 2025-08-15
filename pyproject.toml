@@ -1,21 +1,20 @@
-[project]
+[tool.poetry]
 name = "support-tg-bot"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "ssset",email = "claimov@gmail.com"}
-]
+authors = ["ssset <claimov@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "aiogram (>=3.21.0,<4.0.0)",
-    "httpx (>=0.28.1,<0.29.0)",
-    "django-environ (<=0.12.0)",
-    "pydantic-settings (>=2.10.1,<3.0.0)",
-    "dishka (>=1.6.0,<2.0.0)",
-    "dependency-injector (>=4.48.1,<5.0.0)"
-]
+packages = [{include = "support_tg_bot"}]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
+aiogram = ">=3.21.0,<4.0.0"
+httpx = ">=0.28.1,<0.29.0"
+pydantic-settings = ">=2.10.1,<3.0.0"
+dishka = ">=1.6.0,<2.0.0"
+dependency-injector = ">=4.48.1,<5.0.0"
+python-environ = "^0.4.54"
+faststream = {extras = ["kafka", "cli"], version = "^0.5.48"}
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
